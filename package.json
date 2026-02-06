@@ -1,0 +1,46 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "Full-stack blog application with React + Express + SQLite",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "preview": "cd client && npm run preview",
+    "seed": "cd server && npm run seed",
+    "lint": "npm run lint:server && npm run lint:client",
+    "lint:server": "cd server && echo 'No linter configured' || true",
+    "lint:client": "cd client && echo 'No linter configured' || true",
+    "typecheck": "npm run typecheck:server && npm run typecheck:client",
+    "typecheck:server": "cd server && npx tsc --noEmit",
+    "typecheck:client": "cd client && npx tsc --noEmit",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "clean": "rm -rf server/dist client/dist",
+    "deploy:server": "cd server && vercel --prod",
+    "deploy:client": "cd client && netlify deploy --prod"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/blog.git"
+  },
+  "keywords": [
+    "blog",
+    "react",
+    "express",
+    "sqlite",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
