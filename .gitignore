@@ -1,8 +1,15 @@
+# Ortak ignore'lar
 node_modules/
-dist/
 .env
-server/data/*.db
-server/data/*.db-wal
-server/data/*.db-shm
+.env.local
 *.log
+
+# Next.js / React için
+.next/
+out/
+build/
+dist/
+
+# Diğer
 .DS_Store
+Thumbs.db
